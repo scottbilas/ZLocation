@@ -44,7 +44,9 @@ function Update-ZLocation([string]$path)
 
 function Register-PromptHook
 {
-    param()
+    # disable hooking behavior - have the theme call update-zlocation itself
+
+<#    param()
 
     # Insert a call to Update-Zlocation in the prompt function but only once.
     if (-not (Test-Path function:\global:ZlocationOrigPrompt)) {
@@ -55,7 +57,7 @@ function Register-PromptHook
         }
 
         Set-Content -Path function:\prompt -Value $global:ZLocationPromptScriptBlock -Force
-    }
+    }#>
 }
 
 # On removal/unload of the module, restore original prompt or LocationChangedAction event handler.
