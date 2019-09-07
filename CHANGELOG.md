@@ -1,5 +1,12 @@
 CHANGELOG
 -------------
+## 1.3.0
+* Prefer exact match over the weight when picking the location (#90)
+
+## 1.2.0
+
+* Move to unvisited directories if one is provided (#80)
+* Fix - using ZLocation on Windows PowerShell creates errors in $Error (#75)
 
 ## 1.1.0
 
